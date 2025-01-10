@@ -35,14 +35,11 @@ func main() {
 
 type myService struct {
 	loopTicker *time.Ticker
-
-	stopCh chan struct{}
 }
 
 func newMyService() *myService {
 	return &myService{
 		loopTicker: time.NewTicker(1 * time.Second),
-		stopCh:     make(chan struct{}),
 	}
 }
 
